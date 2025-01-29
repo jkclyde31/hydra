@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --background: #302C42;
+  --foreground: #FFFFFF;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #302C42;
+    --foreground: #FFFFFF;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: 'Montserrat' ,Arial, Helvetica, sans-serif;
+}
+
+.inner-row{
+  max-width: 1284px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
