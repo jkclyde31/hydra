@@ -2,6 +2,7 @@ import Banner from "./sections/Banner";
 import CTA from "./sections/CTA";
 import Introduction from "./sections/Introduction";
 import WhyBuildSection from "./sections/WhyBuildSection";
+import CTA2 from "./sections/CTA2";
 
 export const metadata = {
   title: "Homepage"
@@ -14,6 +15,7 @@ export default function Home() {
       <CTA />
       <Introduction />
       <WhyBuildSection />
+      <CTA2 />
 
     </>
   );

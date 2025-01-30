@@ -4,9 +4,9 @@ import Image from "next/image"
 const Banner = () => {
     return (
       <div>
-          <div className="inner-row flex flex-col-reverse md:flex-row  items-center justify-between mt-[50px] md:mt-[190px]">
+          <div className="inner-row flex flex-col-reverse md:flex-row  items-center justify-between mt-[50px] md:mt-[190px] ">
               {/* Text */}
-              <div>
+              <div className="">
                   <h1 className="text-h3 md:text-h1 max-w-[543px] font-bold text-center md:text-left">
                       <span className="text-h2 md:text-h1 bg-gradient-to-r from-[#C0B7E8] to-[#8176AF] bg-clip-text text-transparent">Dive </span> 
                                 Into The Depths Of 
@@ -43,7 +43,7 @@ const Banner = () => {
               </div>
   
               {/* Image */}
-              <div className="flex-shrink-0">
+              <div className="flex-shrink-0 pt-[63px] md:pt-0">
                   <Image
                       src="/banner-image.png"
                       width={426}

@@ -56,7 +56,7 @@ const Introduction = () => {
                   n tempor.
                   </p>
 
-                  <div className="flex max-w-[325px] justify-between gap-5 items-center mt-[34px] md:mt-[66px]  mx-auto md:mx-0">
+                  <div className="flexmax-w-[325px] justify-between gap-5 items-center mt-[34px] md:mt-[66px]  mx-auto md:mx-0">
                     <Button
                         width="w-[90%] md:w-[214px]"
                         height="h-[48px]"

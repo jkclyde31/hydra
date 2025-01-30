@@ -5,7 +5,7 @@ import { siteInfo } from "@/config/siteInfo";
 
 const NavLogo = () => {
   return (
-    <Link className='flex items-center' href='/'>
+    <Link className='hidden md:flex items-center' href='/'>
     <Image className='h-102' src={logo} alt='Nav Logo' />
     {/* <span className='hidden md:block text-white text-2xl font-bold ml-2'>
       {siteInfo.company_name}
