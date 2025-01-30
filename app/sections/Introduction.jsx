@@ -56,9 +56,9 @@ const Introduction = () => {
                   n tempor.
                   </p>
 
-                  <div className="flex max-w-[325px] justify-between gap-5 items-center mt-[66px]">
+                  <div className="flex max-w-[325px] justify-between gap-5 items-center mt-[34px] md:mt-[66px]  mx-auto md:mx-0">
                     <Button
-                        width="w-[214px]"
+                        width="w-[90%] md:w-[214px]"
                         height="h-[48px]"
                         color="bg-gradient-to-r from-[#8176AF] to-[#C0B7E8]"
                         hoverColor="hover:bg-purple-600"

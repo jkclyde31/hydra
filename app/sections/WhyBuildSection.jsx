@@ -29,16 +29,16 @@ const WhyBuildSection = () => {
 
   return (
     <>
-        <div className="inner-row mt-[50px] md:mt-[111px]">
+        <div className="inner-row mt-[60px]  md:mt-[111px] text-center md:text-left">
             {/* Top */}
-            <div className="flex items-center justify-between mb-[50px] md:mb-[101px]">
+            <div className="flex flex-col md:flex-row items-center justify-between mb-[50px] md:mb-[101px] mt-[60px]">
               {/* left */}
               <div>
-                <h2 className="text-h2 font-bold tracking-[0px]">WHY BUILD</h2>
-                <h2 className="text-h2 font-light tracking-[0px] -mt-[10px]">WITH HYDRA?</h2>
+                <h2 className="text-[26px] md:text-h2 font-bold tracking-[0px] mb-[16px] md:mb-0">WHY BUILD</h2>
+                <h2 className="text-[26px] md:text-h2 font-light tracking-[0px] -mt-[10px] mb-[26px] md:mb-0">WITH HYDRA?</h2>
               </div>
               {/* Right */}
-              <p className="text-p max-w-[650px]">
+              <p className="text-left text-p max-w-[650px]">
                 Vitae sapien pellentesque habitant morbi tristique senectus et netus et. Feugiat 
                 nibh sed pulvinar proin gravida hendrerit lectus. Mi sit amet mauris commodo 
                 quis imperdiet massa tincidunt nunc. Viverra aliquet eget sit amet tellus. Ornare 
