@@ -1,6 +1,29 @@
+'use client'
+
 import Image from "next/image";
+import { useKeenSlider } from "keen-slider/react"
+import "keen-slider/keen-slider.min.css"
 
 const HowSection = () => {
+    const [sliderRef] = useKeenSlider({
+        loop: true,
+        mode: "free-snap",
+        slides: {
+          perView: 4,
+          spacing: 15,
+        },
+        breakpoints: {
+          "(max-width: 767px)": {
+            slides: {
+              perView: 1,
+              spacing: 1100,
+            },
+          },
+        },
+      });
+
+
+
     return (
       <>
         <div className="inner-row text-center md:text-left">
@@ -8,8 +31,8 @@ const HowSection = () => {
           <div className="flex flex-col md:flex-row items-center justify-between mb-[36px] md:mb-[101px]">
             {/* left */}
             <div>
-              <h2 className="text-h3 md:text-h2 font-bold tracking-[0px] mb-[16px] md:mb-0">INTRODUCTION</h2>
-              <h2 className="text-h3 md:text-h2 font-light tracking-[0px] -mt-[10px] ">TO HYDRA VR </h2>
+              <h2 className="text-h3 md:text-h2 font-bold tracking-[0px] mb-[16px] md:mb-0">HOW WE BUILD</h2>
+              <h2 className="text-h3 md:text-h2 font-light tracking-[0px] -mt-[10px] ">WITH HYDRA VR </h2>
             </div>
             {/* Right */}
             <p className="text-p max-w-[650px] hidden md:block">
@@ -21,29 +44,18 @@ const HowSection = () => {
           </div>
   
           {/* Bottom - Steps Section */}
-          <div className="relative flex flex-col md:flex-row items-center justify-between py-10 px-4">
-            {/* Connecting Lines - Hidden on Mobile */}
-            <div className="hidden md:block absolute top-1/2 left-0 right-0 h-0.5">
-              <div className="relative w-full h-full">
-                <svg className="w-full" height="4" viewBox="0 0 1000 4">
-                  <path 
-                    d="M0 2 C 250 2, 250 -10, 500 2 C 750 14, 750 -10, 1000 2" 
-                    stroke="#423F52" 
-                    fill="none" 
-                    strokeWidth="2"
-                  />
-                </svg>
-              </div>
-            </div>
-  
-            {/* Step Items */}
+          <div className="relative flex flex-col md:flex-row items-center justify-between w-full">
+          
+
+            <div ref={sliderRef} className="keen-slider">
+
             {[
               { number: "/numbers/num1.png", title: "3D Conception & Design"},
               { number: "/numbers/num2.png", title: "Interaction Design"  },
               { number: "/numbers/num3.png", title: "VR World User Testing"  },
               { number: "/numbers/num4.png", title: "Hydra VR Deploy" },
             ].map((step, index) => (
-              <div key={index} className="relative flex flex-col items-center mb-8 md:mb-0 group">
+              <div key={index} className={`relative flex flex-col items-center mb-8 md:mb-0 group keen-slider__slide number-slide${index + 1}`}>
                 <div className="">
                   <Image 
                     src={step.number}
@@ -64,7 +76,21 @@ const HowSection = () => {
               </div>
             ))}
 
-            
+
+              {/* {categories.map((category, index) => (
+                        <CategoryCard
+                        key={index}
+                        title={category.title}
+                        description={category.description}
+                        image={category.image}
+                        className={`keen-slider__slide number-slide${index + 1}`}
+                        />
+                    ))} */}
+            </div>
+  
+          
+
+
           </div>
         </div>
       </>
