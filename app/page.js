@@ -4,6 +4,7 @@ import Introduction from "./sections/Introduction";
 import WhyBuildSection from "./sections/WhyBuildSection";
 import CTA2 from "./sections/CTA2";
 import HowSection from "./sections/HowSection";
+import ContactSection from "./sections/ContactSection";
 
 export const metadata = {
   title: "Homepage"
@@ -18,6 +19,8 @@ export default function Home() {
       <WhyBuildSection />
       <CTA2 />
       <HowSection />
+      <ContactSection />
+
 
     </>
   );
