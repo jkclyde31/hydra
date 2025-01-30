@@ -4,16 +4,16 @@ import Button from "@/components/Button"
 const Introduction = () => {
   return (
     <>
-        <div className="inner-row">
+        <div className="inner-row text-center md:text-left">
             {/* Top */}
-            <div className="flex items-center justify-between mb-[50px] md:mb-[101px]">
+            <div className="flex flex-col md:flex-row items-center justify-between mb-[36px] md:mb-[101px]">
               {/* left */}
               <div>
-                <h2 className="text-h2 font-bold tracking-[0px]">ABOUT</h2>
-                <h2 className="text-h2 font-light tracking-[0px] -mt-[10px]">HYDRA VR</h2>
+                <h2 className="text-h3 md:text-h2 font-bold tracking-[0px] mb-[16px] md:mb-0">INTRODUCTION</h2>
+                <h2 className="text-h3 md:text-h2 font-light tracking-[0px] -mt-[10px] ">TO HYDRA VR </h2>
               </div>
               {/* Right */}
-              <p className="text-p max-w-[650px]">
+              <p className="text-p max-w-[650px] hidden md:block">
                 Eget mi proin sed libero enim sed faucibus turpis. Nisl rhoncus mattis rhoncus 
                 urna neque viverra justo. Vivamus at augue eget arcu dictum. Ultrices gravida 
                 dictum fusce ut placerat orci. Aenean et tortor at risus viverra adipiscing at in. 
@@ -27,7 +27,7 @@ const Introduction = () => {
             </div>
 
             {/* Bottom */}
-            <div className="inner-row flex items-center justify-between ">
+            <div className="inner-row flex flex-col md:flex-row  items-center justify-between ">
              {/* Image */}
               <div className="flex-shrink-0">
                   <Image
@@ -42,9 +42,9 @@ const Introduction = () => {
 
               {/* Text */}
               <div className="max-w-[650px] w-full">
-                <h2 className="text-h2 font-bold tracking-[0px]">INTRODUCTION</h2>
-                <h2 className="text-h2 font-light tracking-[0px] -mt-[10px]">TO HYDRA VR</h2>
-                  <p className="text-p max-w-[640px] pt-[15px] md:pt-[36px]">
+                <h2 className="text-h2 font-bold tracking-[0px] hidden md:block"> ABOUT</h2>
+                <h2 className="text-h2 font-light tracking-[0px] -mt-[10px] hidden md:block">HYDRA VR</h2>
+                  <p className="text-p max-w-full text-left md:max-w-[640px]  pt-[15px] md:pt-[36px]">
                   Eget mi proin sed libero enim sed faucibus turpis. Nisl rhoncus mattis rhoncus 
                   urna neque viverra justo. Vivamus at augue eget arcu dictum. Ultrices gravida 
                   dictum fusce ut placerat orci. Aenean et tortor at risus viverra adipiscing at in. 
