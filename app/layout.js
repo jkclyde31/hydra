@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
         <SiteInfoProvider>
           <Navbar/>
           {children}
-          {/* <Footer/> */}
+          <Footer/>
         </SiteInfoProvider>
         
       </body>
