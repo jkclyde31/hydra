@@ -8,8 +8,8 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className='inner-row '>
-      <div className='flex flex-col md:flex-row items-start justify-between pb-[70px] border-b border-[#423F52]'>
+    <footer className='inner-row flex flex-col justify-center items-center md:block '>
+      <div className='flex flex-col md:flex-row items-start justify-center md:justify-between  pb-[25px] md:pb-[70px] border-b border-[#423F52] text-center md:text-start pt-[25px]'>
         {/* Logo Section */}
         <div className='mb-8 md:mb-0'>
           <Image src={logo} alt="Hydra Logo" width={185} height={187} />
@@ -19,7 +19,7 @@ const Footer = () => {
         <div className='hidden md:block w-px h-[196px] bg-[#423F52]'></div>
 
         {/* First Links Column */}
-          <nav className='flex flex-col gap-4 font-bold text-[16px]'>
+          <nav className='flex flex-col gap-4 font-bold text-[16px] w-full md:w-auto'>
             <Link href="/about" className='hover:text-[#C0B7E8] transition-colors'>ABOUT</Link>
             <Link href="/services" className='hover:text-[#C0B7E8] transition-colors'>SERVICES</Link>
             <Link href="/technologies" className='hover:text-[#C0B7E8] transition-colors'>TECHNOLOGIES</Link>
@@ -32,7 +32,7 @@ const Footer = () => {
         <div className='hidden md:block w-px h-[196px] bg-[#423F52]'></div>
 
         {/* Second Links Column */}
-          <nav className='flex flex-col gap-4 font-bold text-[16px]'>
+          <nav className='flex flex-col gap-4 font-bold text-[16px] w-full md:w-auto'>
             <Link href="/faq" className='hover:text-[#C0B7E8] transition-colors'>F.A.Q</Link>
             <Link href="/sitemap" className='hover:text-[#C0B7E8] transition-colors'>SITEMAP</Link>
             <Link href="/conditions" className='hover:text-[#C0B7E8] transition-colors'>CONDITIONS</Link>
@@ -43,7 +43,7 @@ const Footer = () => {
         <div className='hidden md:block w-px h-[196px] bg-[#423F52]'></div>
 
         {/* Social Media Section */}
-        <div className='flex flex-col gap-4'>
+        <div className='flex flex-col gap-4 pt-[25px] md:pt-0'>
           <h3 className='font-bold text-[16px] mb-[18px]'>SOCIALIZE WITH HYDRA</h3>
           <div className='flex gap-4'>
             <Link href={siteInfo.social_links.facebook} className='hover:opacity-80'>
