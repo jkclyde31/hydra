@@ -44,10 +44,16 @@ const Introduction = () => {
               <div className="max-w-[650px] w-full">
                 <h2 className="text-h2 font-bold tracking-[0px]">INTRODUCTION</h2>
                 <h2 className="text-h2 font-light tracking-[0px] -mt-[10px]">TO HYDRA VR</h2>
-                  <p className="text-p max-w-[456px] pt-[15px] md:pt-[36px]">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                      sed do eiusmod tempor incididunt ut labore et dolore 
-                      nisl tincidunt eget. Lectus mauris eros in vitae .
+                  <p className="text-p max-w-[640px] pt-[15px] md:pt-[36px]">
+                  Eget mi proin sed libero enim sed faucibus turpis. Nisl rhoncus mattis rhoncus 
+                  urna neque viverra justo. Vivamus at augue eget arcu dictum. Ultrices gravida 
+                  dictum fusce ut placerat orci. Aenean et tortor at risus viverra adipiscing at in. 
+                  Mattis aliquam faucibus purus in massa. Est placerat in egestas erat imperdiet 
+                  sed. Consequat semper viverra nam libero justo laoreet sit amet. Aliquam 
+                  etiam erat velit scelerisque in dictum non consectetur a. Laoreet sit amet 
+                  cursus sit amet. Vel eros donec ac odio tempor orci dapibus. Sem nulla pha
+                  retra diam sit amet nisl suscipit adipiscing bibendum. Leo a diam sollicitudi
+                  n tempor.
                   </p>
 
                   <div className="flex max-w-[325px] justify-between gap-5 items-center mt-[66px]">
