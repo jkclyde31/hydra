@@ -1,6 +1,9 @@
-import Image from "next/image"
-import Button from "@/components/Button"
+'use client'
+
+
 import CategoryCard from "@/components/categoryCard";
+import { useKeenSlider } from "keen-slider/react"
+import "keen-slider/keen-slider.min.css"
 
 const WhyBuildSection = () => {
     const categories = [
@@ -27,9 +30,32 @@ const WhyBuildSection = () => {
       ]; 
 
 
+      const [sliderRef] = useKeenSlider({
+        loop: true,
+        mode: "free-snap",
+        slides: {
+          perView: 4,
+          spacing: 15,
+        },
+        breakpoints: {
+          "(max-width: 767px)": {
+            slides: {
+              perView: 1,
+              spacing: 15,
+            },
+          },
+        },
+      });
+
+
   return (
     <>
         <div className="inner-row mt-[60px]  md:mt-[111px] text-center md:text-left">
+
+
+    
+
+
             {/* Top */}
             <div className="flex flex-col md:flex-row items-center justify-between mb-[50px] md:mb-[101px] mt-[60px]">
               {/* left */}
@@ -48,17 +74,17 @@ const WhyBuildSection = () => {
 
             {/* Bottom */}
             <div className="inner-row">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[15px]">
-                {categories.map((category, index) => (
-                    <CategoryCard
-                    key={index}
-                    title={category.title}
-                    description={category.description}
-                    image={category.image}
-                    />
-                ))}
-                </div>
-            
+            <div ref={sliderRef} className="keen-slider">
+              {categories.map((category, index) => (
+                        <CategoryCard
+                        key={index}
+                        title={category.title}
+                        description={category.description}
+                        image={category.image}
+                        className={`keen-slider__slide number-slide${index + 1}`}
+                        />
+                    ))}
+            </div>
   
           
              </div>

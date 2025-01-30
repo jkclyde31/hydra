@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Button from "./Button";
 
-const CategoryCard = ({ title, description, image }) => (
-    <div className="bg-[#211E2E] rounded-[32px] p-[20px] flex flex-col items-center text-center">
+const CategoryCard = ({ title, description, image, className }) => (
+    <div className={`bg-[#211E2E] rounded-[32px] p-[20px] flex flex-col items-center text-center ${className}`}>
       <div >
         <Image
         width={219}
