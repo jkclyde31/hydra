@@ -1,6 +1,6 @@
 'use client';
 
-import React,  { useState } from 'react';
+import React, { useState } from 'react';
 import Image from "next/image";
 
 const CTA = () => {
@@ -36,7 +36,7 @@ const CTA = () => {
     <div>
       <div className="inner-row mt-6 md:mt-24 mb-[60px] md:mb-[90px] animate-on-scroll-up">
         {/* Desktop View */}
-        <div className="hidden md:block w-full bg-[#211E2E] rounded-[100px] py-[50px] px-10 " >
+        <div className="hidden md:block w-full rounded-[100px] py-[50px] px-10" style={{ background: 'radial-gradient(circle, #3A3456, #211E2E)' }}>
           <div className="flex items-center justify-between px-10 gap-8">
             {slides.map((slide, index) => (
               <React.Fragment key={index}>
@@ -65,7 +65,7 @@ const CTA = () => {
         </div>
 
         {/* Mobile View with Slider */}
-        <div className="block md:hidden w-full bg-[#211E2E] rounded-[100px] p-[25px] relative mb-[60px]">
+        <div className="block md:hidden w-full rounded-[100px] p-[25px] relative mb-[60px]" style={{ background: 'radial-gradient(circle, #3A3456, #211E2E)' }}>
           <div className="flex items-center justify-center  max-w-[75%] w-full mx-auto">
             <div className="">
               <Image
@@ -102,8 +102,6 @@ const CTA = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </button>
-
-         
         </div>
       </div>
     </div>
