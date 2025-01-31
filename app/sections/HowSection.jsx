@@ -58,7 +58,7 @@ const HowSection = () => {
               <div
               key={index}
               className={`relative flex flex-col items-center mb-8 md:mb-0 group keen-slider__slide number-slide${index + 1} animate-on-scroll-up`}
-              data-delay={(index * 1).toString()} // Convert to seconds and ensure it's a string
+              data-delay={(index * 0.2).toString()} // Convert to seconds and ensure it's a string
             >                <div className="" >
                   <Image 
                     src={step.number}
