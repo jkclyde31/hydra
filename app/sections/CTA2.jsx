@@ -26,9 +26,8 @@ const CTA2 = () => {
 
   return (
     <div>
-      <div className="inner-row mt-6 md:mt-[110px] text-center md:text-left pb-[15px] md:pb-[132px]">
-        {/* Desktop View */}
-        <div className=" w-full bg-[#211E2E] rounded-[50px] md:rounded-[200px] py-[45px] md:py-[108px] px-10  mt-[56px] md:mt-0">
+      <div className="inner-row mt-6 md:mt-[110px] text-center md:text-left pb-[15px] md:pb-[132px] ">
+        <div className=" w-full bg-[#211E2E] rounded-[50px] md:rounded-[200px] py-[45px] md:py-[108px] px-10  mt-[56px] md:mt-0 animate-on-scroll-up">
           <div className="flex flex-col items-center justify-center  ">
             <h2 className="text-[16px] md:text-h2 font-bold tracking-0">TECHNOLOGIES & HARDWARE </h2>
             <h2 className="text-h3 md:text-h2 font-light tracking-0">USED BY HYDRA VR.</h2>
@@ -37,7 +36,7 @@ const CTA2 = () => {
         </div>
 
         {/* Sponsors */}
-        <div ref={sliderRef} className="keen-slider flex items-center">
+        <div ref={sliderRef} className="keen-slider flex items-center animate-on-scroll-up">
         <div className="keen-slider__slide number-slide1 relative h-[172px] w-[172px]">
           <Image 
             src={"/sponsors/sponsor1.png"} 

@@ -34,9 +34,9 @@ const CTA = () => {
 
   return (
     <div>
-      <div className="inner-row mt-6 md:mt-24 mb-[60px] md:mb-[90px]">
+      <div className="inner-row mt-6 md:mt-24 mb-[60px] md:mb-[90px] animate-on-scroll-up">
         {/* Desktop View */}
-        <div className="hidden md:block w-full bg-[#211E2E] rounded-[100px] py-[50px] px-10">
+        <div className="hidden md:block w-full bg-[#211E2E] rounded-[100px] py-[50px] px-10 " >
           <div className="flex items-center justify-between px-10 gap-8">
             {slides.map((slide, index) => (
               <React.Fragment key={index}>

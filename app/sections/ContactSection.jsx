@@ -2,7 +2,7 @@ import Button from "@/components/Button";
 
 const ContactSection = () => {
     return (
-      <div className="inner-row mt-[60px] md:mt-[111px] text-center mb-[60px] md:mb-[111px]">
+      <div className="inner-row mt-[60px] md:mt-[111px] text-center mb-[60px] md:mb-[111px] animate-on-scroll-up">
         <div className="bg-[#211E2E] rounded-[40px] px-[15px] md:px-[110px] w-full mx-auto pt-[25px] md:pt-[90px] pb-[25px] md:pb-[84px]">
           <h2 className="text-h3 md:text-h2 font-bold mb-[30px]">JOIN HYDRA</h2>
           <p className="text-h3 md:text-h2 font-light mb-[25px] md:mb-[65px]">Let's Build Your VR Experience</p>

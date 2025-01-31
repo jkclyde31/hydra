@@ -74,7 +74,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className=' bg-transparent  z-50 mt-[20px]'>
+      <nav className=' bg-transparent  z-50 mt-[20px] animate-slide-down' data-delay='0.3'>
         <div className='inner-row'>
           <div className='relative flex  items-center justify-center'>
             <MenuDropDown 
