@@ -98,13 +98,13 @@ const Navbar = () => {
             animate="visible"
             exit="hidden"
             variants={mobileMenuVariants}
-            className='md:hidden fixed inset-0 bg-[#302C42] z-[70] flex flex-col'
+            className='md:hidden fixed inset-0 bg-[#302C42] z-[70] flex flex-col '
           >
             {/* Top Bar with Close Button */}
             <div className="h-16 flex items-center px-2 sm:px-6 lg:px-8">
               <button
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="inline-flex items-center justify-center rounded-md p-2 text-white hover:[#302C42] focus:outline-none"
+                className="inline-flex items-center justify-center rounded-md p-2 text-white hover:[#302C42] focus:outline-none "
               >
                 <X size={24} />
               </button>

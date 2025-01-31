@@ -27,7 +27,7 @@ const SocialLinks = ({mobile=false}) => {
       className=" rounded-[150px] "
 
     >
-      Contact Us
+      Join Hydra
     </Button> 
     
     

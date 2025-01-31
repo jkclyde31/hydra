@@ -3,6 +3,7 @@ import logo from '@/public/logo.png';
 import Image from "next/image";
 import { siteInfo } from "@/config/siteInfo";
 
+
 const NavLogo = () => {
   return (
     <Link className='hidden md:flex items-center' href='/'>

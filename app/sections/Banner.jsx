@@ -3,9 +3,9 @@ import Image from "next/image";
 
 const Banner = () => {
   return (
-    <div className="relative z-0">
+    <div className="relative z-0 mt-0 md:mt-[190px]">
       {/* Main Content */}
-      <div className="inner-row flex flex-col-reverse md:flex-row items-center justify-between mt-[50px] md:mt-[190px]">
+      <div className="inner-row flex flex-col-reverse md:flex-row items-center justify-between ">
         {/* Text */}
         <div className="relative z-20 animate-fade-in" >
           <h1 className="text-h3 md:text-h1 max-w-[543px] font-bold text-center md:text-left  animate-slide-up" data-delay="0.3">
@@ -46,7 +46,7 @@ const Banner = () => {
         </div>
 
         {/* Image Container */}
-        <div className="flex-shrink-0 pt-[63px] md:pt-0 relative animate-slide-up" data-delay="0.3">
+        <div className="flex-shrink-0 pt-[25px] md:pt-0 relative animate-slide-up" data-delay="0.3">
           {/* "Before" Image with Thunder Effect */}
           <div className="absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0 w-[180%] h-[180%] hidden md:flex items-center justify-center">
             <div
