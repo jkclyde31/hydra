@@ -24,7 +24,7 @@ const Banner = () => {
             Lectus mauris eros in vitae .
           </p>
 
-          <div className="flex max-w-[325px] justify-center md:justify-between gap-5 items-center mt-[36px] md:mt-[66px] mb-[36px] md:mb-0 mx-auto md:mx-0 animate-slide-up" data-delay="0.9">
+          <div className="flex max-w-[325px] justify-center md:justify-between gap-5 items-center mt-[15px] md:mt-[66px] mb-[25px] md:mb-0 mx-auto md:mx-0 animate-slide-up" data-delay="0.9">
             <Button
               width="w-[90%] md:w-[214px]"
               height="h-[48px]"

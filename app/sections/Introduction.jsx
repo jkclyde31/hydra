@@ -6,10 +6,10 @@ const Introduction = () => {
     <>
         <div className="inner-row text-center md:text-left ">
             {/* Top */}
-            <div className="flex flex-col md:flex-row items-center justify-between mb-[36px] md:mb-[101px]">
+            <div className="flex flex-col md:flex-row items-center justify-between mb-[15px] md:mb-[101px]">
               {/* left */}
               <div className="animate-on-scroll-right">
-                <h2 className="text-h3 md:text-h2 font-bold tracking-[0px] mb-[16px] md:mb-0">INTRODUCTION</h2>
+                <h2 className="text-h3 md:text-h2 font-bold tracking-[0px] mb-[5px] md:mb-0">INTRODUCTION</h2>
                 <h2 className="text-h3 md:text-h2 font-light tracking-[0px] -mt-[10px] ">TO HYDRA VR </h2>
               </div>
               {/* Right */}
@@ -56,7 +56,7 @@ const Introduction = () => {
                   n tempor.
                   </p>
 
-                  <div className="flexmax-w-[325px] justify-between gap-5 items-center mt-[34px] md:mt-[66px]  mx-auto md:mx-0">
+                  <div className="flexmax-w-[325px] justify-between gap-5 items-center mt-[15px] md:mt-[66px]  mx-auto md:mx-0">
                     <Button
                         width="w-[90%] md:w-[214px]"
                         height="h-[48px]"
