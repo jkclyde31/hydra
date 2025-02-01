@@ -3,25 +3,37 @@
 import Image from "next/image";
 import { useKeenSlider } from "keen-slider/react"
 import "keen-slider/keen-slider.min.css"
+import { useState } from 'react'
+import CarouselNavigation from "@/components/CarouselNavigation";
 
 const HowSection = () => {
-    const [sliderRef] = useKeenSlider({
-        loop: true,
-        mode: "free-snap",
+  const [currentSlide, setCurrentSlide] = useState(0)
+  const [loaded, setLoaded] = useState(false)
+  const [sliderRef, instanceRef] = useKeenSlider({
+    loop: true,
+    mode: "free-snap",
+    initial: 0,
+    slides: {
+      perView: 4,
+      spacing: 15,
+    },
+    breakpoints: {
+      "(max-width: 767px)": {
         slides: {
-          perView: 4,
+          perView: 1,
           spacing: 15,
         },
-        breakpoints: {
-          "(max-width: 767px)": {
-            slides: {
-              perView: 1,
-              spacing: 1100,
-            },
-          },
-        },
-      });
+      },
+    },
+    slideChanged(slider) {
+      setCurrentSlide(slider.track.details.rel)
+    },
+    created() {
+      setLoaded(true)
+    },
+  });
 
+      
 
 
     return (
@@ -72,12 +84,19 @@ const HowSection = () => {
                 {/* Text Content */}
                 <div className="text-center mt-4 flex flex-col items-center">
                   <div className="flex items-center gap-2">
-                    <span className="text-[#C0B7E8] text-[67px]">→</span>
-                    <p className="text-h3 font-bold tracking-0 max-w-[187px] text-left">{step.title}</p>
+                    <span className="text-[#C0B7E8] text-[67px] hidden">→</span>
+                    <p className="text-h3 font-bold tracking-0 max-w-[187px] text-center md:text-left">{step.title}</p>
                   </div>
                 </div>
               </div>
             ))}
+
+                    {loaded && instanceRef.current && (
+                        <CarouselNavigation 
+                            onPrev={() => instanceRef.current?.prev()}
+                            onNext={() => instanceRef.current?.next()}
+                        />
+                    )}
             </div>
           </div>
         </div>

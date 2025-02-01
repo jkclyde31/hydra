@@ -3,26 +3,36 @@
 import { useKeenSlider } from "keen-slider/react"
 import "keen-slider/keen-slider.min.css"
 import Image from "next/image";
+import CarouselNavigation from "@/components/CarouselNavigation";
+import { useState } from "react";
 
 const CTA2 = () => {
 
-  const [sliderRef] = useKeenSlider({
-    loop: true,
-    mode: "free-snap",
-    slides: {
-      perView: 4,
-      spacing: 15,
-    },
-    breakpoints: {
-      "(max-width: 767px)": {
-        slides: {
-          perView: 1,
-          spacing: 15,
-        },
+  const [currentSlide, setCurrentSlide] = useState(0)
+  const [loaded, setLoaded] = useState(false)
+ const [sliderRef, instanceRef] = useKeenSlider({
+  loop: true,
+  mode: "free-snap",
+  initial: 0,
+  slides: {
+    perView: 4,
+    spacing: 15,
+  },
+  breakpoints: {
+    "(max-width: 767px)": {
+      slides: {
+        perView: 1,
+        spacing: 15,
       },
     },
-  });
-
+  },
+  slideChanged(slider) {
+    setCurrentSlide(slider.track.details.rel)
+  },
+  created() {
+    setLoaded(true)
+  },
+});
 
   return (
     <div>
@@ -36,7 +46,7 @@ const CTA2 = () => {
         </div>
 
         {/* Sponsors */}
-        <div ref={sliderRef} className="keen-slider flex items-center animate-on-scroll-up">
+      <div ref={sliderRef} className="keen-slider flex items-center animate-on-scroll-up">
         <div className="keen-slider__slide number-slide1 relative h-[172px] w-[172px]">
           <Image 
             src={"/sponsors/sponsor1.png"} 
@@ -74,7 +84,13 @@ const CTA2 = () => {
             style={{ objectFit: 'contain' }}
           />
         </div>
-        </div>
+        {loaded && instanceRef.current && (
+                        <CarouselNavigation 
+                            onPrev={() => instanceRef.current?.prev()}
+                            onNext={() => instanceRef.current?.next()}
+                        />
+                    )}
+      </div>
 
       </div>
     </div>
